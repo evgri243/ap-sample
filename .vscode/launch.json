@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Score (Python)",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "${config:python.pythonPath}",
+            "console": "integratedTerminal",
+            "program": "${workspaceRoot}/Score/run.py",
+            "cwd": "${workspaceRoot}/Score",
+            "env": {
+                "inputcsv": "${workspaceRoot}/Score/debug/input.csv",
+                "outputcsv": "${workspaceRoot}/Score/debug/output.csv",
+                "unscorablecsv": "${workspaceRoot}/Score/debug/unscorable.csv"
+            },
+            "debugOptions": [
+                "RedirectOutput",
+                "WaitOnAbnormalExit"
+            ]
+        },
+        {
+            "name": "Setup (Python)",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "${config:python.pythonPath}",
+            "console": "integratedTerminal",
+            "program": "${workspaceRoot}/Setup/run.py",
+            "cwd": "${workspaceRoot}/Setup",
+            "env": { },
+            "debugOptions": [
+                "RedirectOutput", 
+                "WaitOnAbnormalExit"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "inputcsv",
+      "type": "blobTrigger",
+      "path": "mail-classify/input/{input_file_name}.csv",
+      "connection": "AzureWebJobStorage",
+      "direction": "in"
+    },
+    {
+      "name": "scoredcsv",
+      "type": "blob",
+      "path": "mail-classify/output/{input_file_name}.scored.csv",
+      "connection": "AzureWebJobStorage",
+      "direction": "out"
+    },
+    {
+      "name": "unscorablecsv",
+      "type": "blob",
+      "path": "mail-classify/output/{input_file_name}.unscorable.csv",
+      "connection": "AzureWebJobStorage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
